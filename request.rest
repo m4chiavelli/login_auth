@@ -1,0 +1,96 @@
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Peli",
+    "email": "peli@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+# get all user
+GET http://localhost:5000/users
+
+###
+# get user by id
+GET http://localhost:5000/users/a0331df8-7dad-43bd-a832-b53ce38ded38
+
+###
+# update user
+PATCH  http://localhost:5000/users/38a5bf38-6f64-4f9d-8dd0-3848943d29b1
+Content-Type: application/json
+
+{
+    "name": "Misel",
+    "email": "misel@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": ""
+}
+###
+# delete user
+DELETE http://localhost:5000/users/ddc8fb52-e33a-414a-8f0a-35b95c2e2c17
+
+###
+# login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "doe@gmail.com",
+    "password": "123456"
+}
+
+###
+# login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "andika@gmail.com",
+    "password": "123456"
+}
+
+###
+# logout
+DELETE http://localhost:5000/logout
+
+###
+# who
+GET http://localhost:5000/me
+
+###
+# get all product
+GET http://localhost:5000/products
+
+###
+# create product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 5",
+    "price": 10109
+}
+
+###
+# get product by id
+GET http://localhost:5000/products/5063b4e8-aaee-4769-a22f-95faa1b39011
+
+###
+# update product
+PATCH http://localhost:5000/products/5063b4e8-aaee-4769-a22f-95faa1b39011
+Content-Type: application/json
+
+{
+
+    "name": "Acer nitroo",
+    "price": 101090
+}
+
+###
+# delete product
+DELETE http://localhost:5000/products/ee1e9e29-3f7b-4024-b6b3-d18d178e0dfc
